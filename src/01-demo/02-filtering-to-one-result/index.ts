@@ -1,0 +1,9 @@
+export { runner as first } from './01-first';
+export { runner as last } from './02-last';
+export { runner as elementAt } from './03-element-at';
+export { runner as min } from './04-min';
+export { runner as max } from './05-max';
+export { runner as find } from './06-find';
+export { runner as findIndex } from './07-find-index';
+export { runner as single } from './08-single';
+export { runner as ignoreElements } from './09-ignore-elements';
