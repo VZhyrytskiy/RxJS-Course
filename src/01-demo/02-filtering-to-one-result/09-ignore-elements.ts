@@ -8,17 +8,17 @@ const start = 0;
 const count = 5;
 
 // pass only complete
-export function ignoreElementsDemo1() {
+(function ignoreElementsDemo1() {
   const source$ = range(start, count);
 
   const stream$ = source$.pipe(ignoreElements());
 
   //output: "Complete!"
     // run(stream$);
-}
+})();
 
 // pass only error
-export function ignoreElementsDemo2() {
+(function ignoreElementsDemo2() {
   const source$ = range(start, count).pipe(
     mergeMap(val => {
       if (val === 4) {
@@ -32,6 +32,6 @@ export function ignoreElementsDemo2() {
 
   //output: "Error: Error at 4"
   // run(stream$);
-}
+})();
 
 export function runner() {}
