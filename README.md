@@ -30,3 +30,6 @@ Using Language: TypeScript
 
 3. Peter Vereshagin (<Peter_Vereshagin@epam.com>) 
     - Comments typos fix
+
+4. Ankit Katheriya(<Ankit_Katheriya@epam.com>)
+    - Add task for max() operator

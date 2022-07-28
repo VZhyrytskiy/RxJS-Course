@@ -46,12 +46,28 @@ import { ajax } from 'rxjs/ajax';
 })();
 
 
-// Task 5. max()
-// RU: Создайте поток объектов с двумя свойствами: title, quantity.
-// Получите объект с максимальным значением quantity 
-// EN: Create an observable of objects with two properties: title, quantity.
-// Get the object with the maximum quantity value
+// Task 5. max() (Ankit Katheriya)
+// RU: Пусть у нас есть список проектов с датой начала и названием
+// Мы хотим получить имя самого последнего запущенного проекта 
+// EN: Let's we have a list of projects with started date and name 
+// We want to get the name of the most recent(latest) started project
 (function task5() {
+    const source$ = from([{
+        dateStart: "2020-04-13T00:00:00",
+        ProjectId: "1",
+        ProjectName: "First",
+      },
+      {
+        dateStart: "2020-07-05T00:00:00",
+        ProjectId: "2",
+        ProjectName: "Second",
+      },
+      {
+        dateStart: "2020-06-04T00:00:00",
+        ProjectId: "3",
+        ProjectName: "Third",
+      }]);
+
     // const stream$ = 
 
     // run(stream$);
