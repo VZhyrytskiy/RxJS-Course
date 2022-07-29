@@ -83,7 +83,7 @@ import { addItem, run } from "../03-utils";
 })();
 
 // Task 6. window
-// RU: Перепишите первое задание с использованием опереатора window
+// RU: Перепишите первое задание с использованием оператора window
 // EN: Rewrite the first task using the window operator
 (function Task6() {
     // const stream$ = 
@@ -92,7 +92,7 @@ import { addItem, run } from "../03-utils";
 })();
 
 // Task 7. windowWhen
-// RU: Перепишите второе задание с использованием опереатора windowWhen
+// RU: Перепишите второе задание с использованием оператора windowWhen
 // EN: Rewrite the second task using the windowWhen operator
 (function Task7() {
     function *getRandom(min: number, max: number) {
@@ -106,7 +106,7 @@ import { addItem, run } from "../03-utils";
 })();
 
 // Task 8. windowCount
-// RU: Перепишите третье задание с использованием опереатора windowCount
+// RU: Перепишите третье задание с использованием оператора windowCount
 // EN: Rewrite the third task using the windowCount operator
 (function Task8() {
     // const source$ = 
@@ -115,7 +115,7 @@ import { addItem, run } from "../03-utils";
 })();
 
 // Task 9. windowTime
-// RU: Перепишите четвертое задание с использованием опереатора windowTime
+// RU: Перепишите четвертое задание с использованием оператора windowTime
 // EN: Rewrite the fourth task using the windowTime operator
 (function Task9() {
     // const clicks$ = 
@@ -124,7 +124,7 @@ import { addItem, run } from "../03-utils";
 })();
 
 // Task 10. windowToggle
-// RU: Перепишите пятое задание с использованием опереатора windowToggle
+// RU: Перепишите пятое задание с использованием оператора windowToggle
 // EN: Rewrite the fifth task using the windowToggle operator
 (function Task10() {
     // const source$ =

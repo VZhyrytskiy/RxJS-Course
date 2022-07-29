@@ -21,7 +21,7 @@ import { addItem, run } from './../../03-utils';
     window(windowBoundariesSignal$), // <-- inner observable
     tap(() => console.log('window')),
     switchMap(b => b.pipe(toArray())), // <-- transform observable to array
-    // concatAll(),                    // <-- flatten observable-of-observabe
+    // concatAll(),                    // <-- flatten observable-of-observable
     take(10) // <-- just to limit the life of the source Observable
   );
 
