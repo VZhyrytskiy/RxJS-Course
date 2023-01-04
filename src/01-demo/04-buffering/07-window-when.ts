@@ -34,4 +34,4 @@ import { addItem, run } from './../../03-utils';
   // run(stream$);
 })();
 
-export function runner() {};
+export function runner() {}
