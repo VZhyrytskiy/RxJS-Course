@@ -65,7 +65,7 @@ import { fromFetch } from 'rxjs/fetch';
 // Task 4. switchMap() Author: Dzmitry Skurat
 // RU: Создайте поток по вводу количества записей на странице в текстовое поле.
 // для запроса ajax(`https://api.github.com/users?per_page=${perPage}`)
-// Чтобы не спамить сервер поставте задердку в 1000мс через debounceTime().
+// Чтобы не спамить сервер поставте задержку в 1000мс через debounceTime().
 // С помощью distinctUntilChanged() исключите отправку двух повторных запросов на сервер.
 // Выведите массив логинов.
 // Операторы, которые могут понадобиться: switchMap(), debounceTime(), map().
@@ -83,13 +83,13 @@ import { fromFetch } from 'rxjs/fetch';
 
 // Task 5. exhaustMap()
 // RU: Создайте внешний поток из событий click по кнопке runBtn.
-// Во время первого клика по кнопке создайте внутренний поток, используя interval(1000)
+// Во время первого клика по кнопке создайте внутренний поток, используя interval(1000).
 // Элементы внутреннего потока должны попасть в выходной поток. 
-// Игнорируйте все последующие клики на кнопке
+// Игнорируйте все последующие клики на кнопке.
 // EN: Create an outer stream from click events on the button runBtn.
-// During the first button click, create an inner stream using interval(1000)
+// During the first button click, create an inner stream using interval(1000).
 // Elements of the inner stream must go to the output stream.
-// Ignore all subsequent button clicks
+// Ignore all subsequent button clicks.
 (function task5() {
     // const clicks$ = 
     // const stream$ = 
