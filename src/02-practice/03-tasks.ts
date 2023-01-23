@@ -120,8 +120,9 @@ import { ajax } from 'rxjs/ajax';
 // Then output the entered string.
 // Use map, reduce
 (function task82() {
+    // const field =    
     // const stream$ = 
-    
+
     // run(stream$);
 })();
 

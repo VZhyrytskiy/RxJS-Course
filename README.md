@@ -33,3 +33,6 @@ Using Language: TypeScript
 
 4. Ankit Katheriya(<Ankit_Katheriya@epam.com>)
     - Add task for max() operator
+
+5. Viktor Verbytskyi(<Viktor_Verbytskyi@epam.com>)
+    - Fix the solution for task 3.8.2
