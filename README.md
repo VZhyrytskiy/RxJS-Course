@@ -36,3 +36,6 @@ Using Language: TypeScript
 
 5. Viktor Verbytskyi(<Viktor_Verbytskyi@epam.com>)
     - Fix the solution for task 3.8.2
+
+6. Maksym Novik(<Maksym_Novik@epam.com>)
+    - Add task for find() operator

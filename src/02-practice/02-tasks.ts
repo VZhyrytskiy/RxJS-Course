@@ -1,6 +1,6 @@
 import { addItem, run } from './../03-utils';
-import { from, fromEvent, of, first, last, elementAt, min, max, find, findIndex, single, map, tap, catchError, EMPTY, ignoreElements, merge, throwError, mergeWith } from 'rxjs';
-import { ajax } from 'rxjs/ajax';
+import { from, fromEvent, of, first, last, elementAt, min, max, find, findIndex, single, map, tap, catchError, EMPTY, ignoreElements, merge, throwError, mergeWith, concatMap } from 'rxjs';
+import { ajax, AjaxResponse } from 'rxjs/ajax';
 
 // Task 1. first()
 // RU: Создайте поток объектов с двумя свойствами: action и priority
@@ -84,31 +84,68 @@ import { ajax } from 'rxjs/ajax';
     // run(stream$);
 })();
 
-// Task7. findIndex()
+// Task 7. find() (Maksym Novik)
+// RU: Создайте поток, используя ajax(`https://dummyjson.com/products?limit=100`)
+// Получите первый продукт из категории 'laptops', у которого рейтинг выше 4.5.
+// Верните объект, который содержит заголовок, описание и цену полученного продукта.
+// Если соответствующий продукт не найден, верните строку "Продукт не найден".
+// EN: Create an observable using ajax(`https://dummyjson.com/products?limit=100`)
+// Get the first product form 'laptops' category which rating is higher than 4.5.
+// Return an object that contains the title, description, and price of the received product.
+// If corresponding product was not found, return 'Product not found' string.
+(function task7() {
+    type Product = {
+        id: number,
+        title: string,
+        description: string,
+        price: number,
+        discountPercentage: number,
+        rating: number,
+        stock: number,
+        brand: string,
+        category: string,
+        thumbnail: string,
+        images: string[]
+    };
+    type ProductsResponse = {
+        products: Product[],
+        total: number,
+        skip: number
+        limit: number,
+    }
+    const stream$ = ajax('https://dummyjson.com/products?limit=100')
+        .pipe(
+            
+        );
+
+    // run(stream$, { outputMethod: "console" });
+})();
+
+// Task 8. findIndex()
 // RU: Создайте поток объектов с двумя свойствами: id, name.
 // Получите номер объекта в потоке, у которого длина name больше 10 символов  
 // EN: Create an observable of object with two properties: id, name.
 // Get the number of the object in the stream whose name is longer than 10 characters
-(function task7() {
+(function task8() {
     // const stream$ = 
 
     // run(stream$);
 })();
 
-// Task 8. single()
+// Task 9. single()
 // RU: Создайте поток объектов с двумя свойствами: title, priority так, чтобы некоторые объекты
 // имели одинаковые значения title
 // Получите объект у которого title = 'Learn RxJS', если он единственный в потоке
 // EN: Create an observable of objects with two properties: title, priority so that some objects
 // have the same title values
 // Get the object with title = 'Learn RxJS' if it's the only one object in the stream
-(function task8() {
+(function task9() {
     // const stream$ = 
     
     // run(stream$);
 })();
 
-// Task 9. ignoreElements() (Uladzimir Miadzinski)
+// Task 10. ignoreElements() (Uladzimir Miadzinski)
 // RU: Создайте три потока, которые представляют результат выполнения запросов на три адреса
 // https://app.com/logout, https://mail.app.com/logout, https://research.app.com/logout
 // используя ajax().
@@ -129,7 +166,7 @@ import { ajax } from 'rxjs/ajax';
 // 'Failed to logout user on all subdomains'
 // Use: ajax, of, mergeWith, tap, catchError, EMPTY
 // Replace the ajax function with of and watch the result
-(function task9() {
+(function task10() {
     // const stream$ = 
 
     // run(stream$);
