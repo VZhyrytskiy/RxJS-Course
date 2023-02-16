@@ -40,11 +40,11 @@ import { addItem, run } from './../../03-utils';
 (function zipWithDemo3() {
   const documentEvent = eventName =>
     fromEvent(document, eventName).pipe(
-      map((e: MouseEvent) => ({ x: e.clientX, y: e.clientY }))
+      map((e: PointerEvent) => ({ x: e.clientX, y: e.clientY }))
     );
 
-  const stream$ = documentEvent('mousedown').pipe(
-    zipWith(documentEvent('mouseup'))
+  const stream$ = documentEvent('pointerdown').pipe(
+    zipWith(documentEvent('pointerup'))
   );
 
   // run(stream$);

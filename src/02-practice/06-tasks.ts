@@ -66,7 +66,7 @@ import { addItem, run } from './../03-utils';
 // Создать поток, который возвращает поток события клик по кнопке. 
 // Преобразовать этот поток к одному элементу - строке 'Request is canceled' 
 // Объедините эти потоки используя race.
-// Используейте: delay, pluck, mapTo, take
+// Используейте: delay, map, take
 // EN: Create a stream that returns request data ajax('http://jsonplaceholder.typicode.com/users')
 // after 5s.
 // Create a stream that emits a button click event.
