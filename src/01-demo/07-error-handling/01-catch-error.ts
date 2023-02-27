@@ -10,7 +10,7 @@
  * 4. Catch, Rethrow and Cleanup
  */
 
-import { throwError, interval, of, catchError, finalize, concatMap } from 'rxjs';
+import { throwError, interval, of, catchError, finalize, concatMap, tap } from 'rxjs';
 import { addItem, run } from './../../03-utils';
 
 // STRATEGY: recover from an error and provide alternative value to complete stream
@@ -55,19 +55,27 @@ import { addItem, run } from './../../03-utils';
 // STRATEGY: re-try
 (function catchErrorDemo3() {
   const stream$ = interval(1000).pipe(
+    tap(value => console.log(value)),
     concatMap(val => {
       if (val > 3) {
         return throwError(() => 'Error >3!'); // <-- create throw error observable
       }
-      return of(val);
+      return of(val).pipe(
+        concatMap(val => {
+          if (val === 2) {
+            return throwError(() => 'Error == 2'); // <-- create throw error observable
+          }
+          return of(val);
+        }) 
+      );
     }),
     catchError((err, sourceObservable) => {
       console.log(err);         // <-- display an error
-      return sourceObservable;  // <-- try the same observable again
+      return sourceObservable;  // <-- try the source observable again
     })
   );
 
-  // run(stream$);
+  run(stream$);
 })();
 
 // STRATEGY: clean up logic
