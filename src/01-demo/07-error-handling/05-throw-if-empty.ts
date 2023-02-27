@@ -1,5 +1,5 @@
 // throwIfEmpty<T>(
-//   errorFactory: () => any = defaultErrorFactory
+//   errorFactory?: () => any = defaultErrorFactory
 // ): MonoTypeOperatorFunction<T>
 
 import { of, fromEvent, timer, throwIfEmpty, takeUntil } from 'rxjs';
