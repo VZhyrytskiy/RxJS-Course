@@ -75,7 +75,7 @@ import { addItem, run } from './../../03-utils';
     })
   );
 
-  run(stream$);
+  // run(stream$);
 })();
 
 // STRATEGY: clean up logic

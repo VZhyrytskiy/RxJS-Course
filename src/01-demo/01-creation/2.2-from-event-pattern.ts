@@ -16,7 +16,7 @@ import { addItem, run } from './../../03-utils';
     document.removeEventListener('click', handler);
   }
 
-  const resultSelector = (event: MouseEvent) => event.clientX; // optional
+  const resultSelector = (event: PointerEvent) => event.clientX; // optional
   const stream$ = fromEventPattern(addHandler, removeHandler, resultSelector);
   // or
   // const stream$ = fromEventPattern(addHandler, removeHandler).pipe(map(resultSelector));

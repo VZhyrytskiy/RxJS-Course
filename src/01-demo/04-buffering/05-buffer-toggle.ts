@@ -23,16 +23,16 @@ import { addItem, run } from './../../03-utils';
   // run(stream$);
 })();
 
-// Toggle buffer on and off on mouse down/up
+// Toggle buffer on and off on pointer down/up
 (function bufferToggleDemo2() {
-  const source$ = fromEvent(document, 'mousemove').pipe(
-    map((event: MouseEvent) => ({clientX: event.clientX, clientY: event.clientY}))
+  const source$ = fromEvent(document, 'pointermove').pipe(
+    map((event: PointerEvent) => ({clientX: event.clientX, clientY: event.clientY}))
   );
 
   const stream$ = source$.pipe(
     bufferToggle(
-      fromEvent(document, 'mousedown'),   // <-- open buffer
-      _ => fromEvent(document, 'mouseup') // <-- close buffer
+      fromEvent(document, 'pointerdown'),   // <-- open buffer
+      _ => fromEvent(document, 'pointerup') // <-- close buffer
     )
   );
 
