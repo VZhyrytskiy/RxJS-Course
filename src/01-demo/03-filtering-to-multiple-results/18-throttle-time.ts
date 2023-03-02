@@ -35,7 +35,7 @@ import { fromEvent, timer, asyncScheduler, take, tap, map, throttleTime } from '
 import { addItem, run } from './../../03-utils';
 
 (function throttleTimeDemo1() {
-  const source$ = fromEvent(document, 'mousemove').pipe(
+  const source$ = fromEvent(document, 'pointermove').pipe(
     map(event => ({
       clientX: event['clientX'],
       clientY: event['clientY']

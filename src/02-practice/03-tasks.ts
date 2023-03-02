@@ -313,9 +313,9 @@ import { ajax } from 'rxjs/ajax';
 
 
 // Task 18. throttleTime()
-// RU: Создайте поток объектов события mousemove.  Модифицируйте этот поток так, чтобы он выдал первое значение,
+// RU: Создайте поток объектов события pointermove.  Модифицируйте этот поток так, чтобы он выдал первое значение,
 // а потом выдавал значение через каждый 2с
-// EN: Create a stream of mousemove events. Modify this stream so that it returns the first value,
+// EN: Create a stream of pointermove events. Modify this stream so that it returns the first value,
 // and then gave a value every 2s
 (function task18() {
     // const stream$ = 
@@ -324,9 +324,9 @@ import { ajax } from 'rxjs/ajax';
 })();
 
 // Task 19. debounce()
-// RU: Создайте поток объектов события mousemove. Модифицируйте этот поток так, чтобы он выдал значение после того,
+// RU: Создайте поток объектов события pointermove. Модифицируйте этот поток так, чтобы он выдал значение после того,
 // как в потоке не будет появляться объект в течении времени заданого с помощью второго потока, например 500мс.
-// EN: Create a stream of mousemove events. Modify this stream so that it emits the value after
+// EN: Create a stream of pointermove events. Modify this stream so that it emits the value after
 // the object will not appear in the stream during the time specified with the the second stream, 
 // for example 500ms.
 (function task19() {

@@ -7,7 +7,7 @@ import { fromEvent, take, tap, auditTime, map } from 'rxjs';
 import { addItem, run } from './../../03-utils';
 
 (function auditTimeDemo() {
-  const source$ = fromEvent(document, 'mousemove').pipe(
+  const source$ = fromEvent(document, 'pointermove').pipe(
     map(event => ({
       clientX: event['clientX'],
       clientY: event['clientY']

@@ -6,7 +6,7 @@ import { fromEvent, interval, timer, debounce, map, tap, take } from 'rxjs';
 import { addItem, run } from './../../03-utils';
 
 (function debounceDemo() {
-  const source$ = fromEvent(document, 'mousemove').pipe(map(event => ({
+  const source$ = fromEvent(document, 'pointermove').pipe(map(event => ({
     clientX: event['clientX'],
     clientY: event['clientY']
   })));
