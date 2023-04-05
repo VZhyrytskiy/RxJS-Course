@@ -16,7 +16,7 @@ import { addItem, run } from './../../03-utils';
 (function fromDemo2() {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(5);
+      // resolve(5);
       // reject('Error');
     }, 3000)
   });

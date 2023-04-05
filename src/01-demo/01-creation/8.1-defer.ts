@@ -13,6 +13,7 @@ import { addItem, run } from './../../03-utils';
   // run(source2$);
 
   // setTimeout(() => {
+  //   run(source1$);
   //   run(source2$);
   // }, 5000);
 })();
